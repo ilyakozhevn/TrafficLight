@@ -25,7 +25,10 @@ class ViewController: UIViewController {
     }
 
     @IBAction func pushSelectorButton() {
-        selectorButton.setTitle("Next", for: .normal)
+        if selectorButton.currentTitle == "Start" {
+            selectorButton.setTitle("Next", for: .normal)
+        }
+        
         fadeAll()
         lights[colorSelectorPosition].alpha = 1
         turnSelector()
