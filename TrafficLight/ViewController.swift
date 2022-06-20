@@ -42,8 +42,7 @@ class ViewController: UIViewController {
     
     private func roundCorners() {
         for light in lights {
-            light.layer.masksToBounds = true
-            light.layer.cornerRadius = light.layer.frame.height * 0.5
+            light.layer.cornerRadius = light.frame.height * 0.5
         }
         selectorButton.layer.cornerRadius = 5
     }
